@@ -1,0 +1,12 @@
+rails new odot
+rails generate scaffold todo_list title:string description:test
+rake db:migrate
+rails server
+bundle install
+bin/rails generate rspec:install
+bundle binstubs rspec-core
+git rm -rf test/
+rake spec
+mkdir -p spec/features/todo_lists
+touch spec/features/todo_lists/create_spec.rb
+ 
